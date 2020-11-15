@@ -1,15 +1,17 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const dbConnection = require("./Config/db");
+const dbConnection = require("./DBConfig/db");
 const userRoutes = require("./Routes/user");
 const app = express();
 
-dotenv.config({ path: "./config/.env" });
+dotenv.config({ path: "./DBConfig/.env" });
 
 dbConnection();
+
 app.use(express.json());
 app.use(cors());
+
 app.use("/api", userRoutes);
 
 // Asigning port to express server

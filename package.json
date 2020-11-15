@@ -4,11 +4,15 @@
   "description": "Finn.ai code challenge level1",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node Express.Server/server",
+    "server": "nodemon Express.Server/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Hemanth Babu Parupalli",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
