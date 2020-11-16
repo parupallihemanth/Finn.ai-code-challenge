@@ -19,7 +19,6 @@ exports.getAllUsers = async (req, res) => {
 // Create/POST new user
 exports.createUser = async (req, res) => {
   try {
-    console.log(req.body);
     const user = await User.create(req.body);
 
     if (!user) {

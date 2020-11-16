@@ -10,11 +10,12 @@ node_modules/
 /coverage
 
 # production
-/build
+/frontend/build
 
 # misc
 
 .DS_Store
+/Express.Server/DBConfig/.env
 .env.local
 .env.development.local
 .env.test.local

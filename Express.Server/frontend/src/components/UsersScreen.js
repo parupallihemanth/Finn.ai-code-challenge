@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col, Button, Modal, Form } from "react-bootstrap";
 import UsersList from "./UsersList";
-import UserDetailsForm from "./UserDetailsForm";
 
 const UsersScreen = () => {
   const [users, setUsers] = useState([]);
@@ -17,12 +16,12 @@ const UsersScreen = () => {
       first_name: firstname,
       last_name: secondname,
     };
-    axios.post("http://localhost:4001/api/newUser", user).then((res) => {});
+    axios.post("http://localhost:4002/api/newUser", user).then((res) => {});
   };
 
   useEffect(() => {
     const usersList = async (req, res) => {
-      const response = await axios.get("http://localhost:4001/api/users");
+      const response = await axios.get("http://localhost:4002/api/users");
       setUsers(response.data.data);
     };
 
