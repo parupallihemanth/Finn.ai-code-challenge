@@ -16,12 +16,12 @@ const UsersScreen = () => {
       first_name: firstname,
       last_name: secondname,
     };
-    axios.post("http://localhost:4002/api/newUser", user).then((res) => {});
+    axios.post("http://localhost:5000/api/newUser", user).then((res) => {});
   };
 
   useEffect(() => {
     const usersList = async (req, res) => {
-      const response = await axios.get("http://localhost:4002/api/users");
+      const response = await axios.get("http://localhost:5000/api/users");
       setUsers(response.data.data);
     };
 

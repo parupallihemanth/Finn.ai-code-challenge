@@ -16,5 +16,5 @@ app.use(cors());
 app.use("/api", userRoutes);
 
 // Asigning port to express server
-const PORT = process.env.PORT || 4001;
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
